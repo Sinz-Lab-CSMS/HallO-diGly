@@ -1,0 +1,42 @@
+Package: HallOdiGly
+Title: HallO-diGly — diGly Occupancy Analysis Shiny App
+Version: 2.0.0
+Date: 2026-09-02
+Description: >
+  Modular interactive Shiny application for label-free diGly (ubiquitin
+  remnant) ubiquitinomics analysis using DIA-NN parquet output and the
+  limpa framework. Designed for any biological system, cell line set, or
+  experimental design — not hard-coded to PDAC or any specific samples.
+  The pipeline covers: DIA-NN parquet scanning and run annotation,
+  GG-site identification filters, precursor missingness filtering,
+  FASTA-based site mapping, DPC estimation, median normalisation,
+  DPC-Quant (site and protein levels), PCA / PLS-DA QC, occupancy
+  correction (site minus protein log2 abundance), reproducibility
+  filtering and site tiering, differential expression with limma/limpa
+  at three layers (site, occupancy, protein), PhosphoSitePlus annotation
+  of ubiquitination sites, integration with a total-proteome DE table to
+  separate degradative from non-degradative ubiquitination events, and
+  multi-format export (TSV, RDS, SVG).
+Depends:
+  R (>= 4.3.0)
+Imports:
+  shiny,
+  shinyFiles,
+  bslib,
+  DT,
+  arrow,
+  limpa,
+  limma,
+  Biostrings,
+  dplyr,
+  tidyr,
+  tibble,
+  stringr,
+  ggplot2,
+  ggrepel,
+  pheatmap,
+  svglite,
+  readr,
+  methods
+Suggests:
+  mixOmics
